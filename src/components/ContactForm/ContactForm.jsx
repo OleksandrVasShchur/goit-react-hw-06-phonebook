@@ -31,7 +31,7 @@ const ContactForm = () => {
       name,
       number,
     };
-    if (contacts.find(contact => contact.name === newContact.name)) {
+    if (contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
       Notify.warning(`${newContact.name} is already in contacts`);
       resetForm();
       return;
